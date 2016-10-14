@@ -10,6 +10,20 @@
 		91558AC31DB1602A00DD9845 /* BaseLocalDataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */; };
 		91558AC81DB1602A00DD9845 /* BaseLocalDataAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */; };
 		91558ACA1DB1602A00DD9845 /* BaseLocalDataAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 91558ABC1DB1602900DD9845 /* BaseLocalDataAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91558AD81DB162A900DD9845 /* DataAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */; };
+		91558AD91DB162A900DD9845 /* EntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD51DB162A900DD9845 /* EntityProtocol.swift */; };
+		91558ADA1DB162A900DD9845 /* GenericDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD61DB162A900DD9845 /* GenericDataAccess.swift */; };
+		91558ADB1DB162A900DD9845 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD71DB162A900DD9845 /* ModelProtocol.swift */; };
+		91558AE31DB162FA00DD9845 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE11DB162FA00DD9845 /* Enum.swift */; };
+		91558AE41DB162FA00DD9845 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE21DB162FA00DD9845 /* ErrorTypes.swift */; };
+		91558AE81DB1631400DD9845 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE61DB1631400DD9845 /* ArrayExtensions.swift */; };
+		91558AE91DB1631400DD9845 /* DataAccessProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */; };
+		91558AEC1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEB1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift */; };
+		91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEE1DB1634A00DD9845 /* PredicateCompoundObject.swift */; };
+		91558AF21DB1634A00DD9845 /* PredicateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEF1DB1634A00DD9845 /* PredicateObject.swift */; };
+		91558AF31DB1634A00DD9845 /* PredicateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AF01DB1634A00DD9845 /* PredicateProtocol.swift */; };
+		91558AF71DB1635D00DD9845 /* SortObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AF51DB1635D00DD9845 /* SortObject.swift */; };
+		91558AF81DB1635D00DD9845 /* SortProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AF61DB1635D00DD9845 /* SortProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +43,20 @@
 		91558AC21DB1602A00DD9845 /* BaseLocalDataAccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseLocalDataAccessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalDataAccessTests.swift; sourceTree = "<group>"; };
 		91558AC91DB1602A00DD9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataAccessProtocol.swift; path = Base/DataAccessProtocol.swift; sourceTree = "<group>"; };
+		91558AD51DB162A900DD9845 /* EntityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityProtocol.swift; path = Base/EntityProtocol.swift; sourceTree = "<group>"; };
+		91558AD61DB162A900DD9845 /* GenericDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericDataAccess.swift; path = Base/GenericDataAccess.swift; sourceTree = "<group>"; };
+		91558AD71DB162A900DD9845 /* ModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelProtocol.swift; path = Base/ModelProtocol.swift; sourceTree = "<group>"; };
+		91558AE11DB162FA00DD9845 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = General/Enum.swift; sourceTree = "<group>"; };
+		91558AE21DB162FA00DD9845 /* ErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTypes.swift; path = General/ErrorTypes.swift; sourceTree = "<group>"; };
+		91558AE61DB1631400DD9845 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Extensions/ArrayExtensions.swift; sourceTree = "<group>"; };
+		91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataAccessProtocolExtensions.swift; path = Extensions/DataAccessProtocolExtensions.swift; sourceTree = "<group>"; };
+		91558AEB1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContextProtocol.swift; path = ManagedObjectContext/ManagedObjectContextProtocol.swift; sourceTree = "<group>"; };
+		91558AEE1DB1634A00DD9845 /* PredicateCompoundObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateCompoundObject.swift; path = BaseLocalDataAccess/Predicate/PredicateCompoundObject.swift; sourceTree = "<group>"; };
+		91558AEF1DB1634A00DD9845 /* PredicateObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateObject.swift; path = BaseLocalDataAccess/Predicate/PredicateObject.swift; sourceTree = "<group>"; };
+		91558AF01DB1634A00DD9845 /* PredicateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateProtocol.swift; path = BaseLocalDataAccess/Predicate/PredicateProtocol.swift; sourceTree = "<group>"; };
+		91558AF51DB1635D00DD9845 /* SortObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortObject.swift; path = Sort/SortObject.swift; sourceTree = "<group>"; };
+		91558AF61DB1635D00DD9845 /* SortProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortProtocol.swift; path = Sort/SortProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +99,12 @@
 		91558ABB1DB1602900DD9845 /* BaseLocalDataAccess */ = {
 			isa = PBXGroup;
 			children = (
+				91558AF41DB1635400DD9845 /* Sort */,
+				91558AED1DB1633800DD9845 /* Predicate */,
+				91558AEA1DB1632200DD9845 /* ManagedObjectContext */,
+				91558AE51DB1630600DD9845 /* Extensions */,
+				91558AE01DB162F000DD9845 /* General */,
+				91558AD31DB162A000DD9845 /* Base */,
 				91558ABC1DB1602900DD9845 /* BaseLocalDataAccess.h */,
 				91558ABD1DB1602900DD9845 /* Info.plist */,
 			);
@@ -84,6 +118,63 @@
 				91558AC91DB1602A00DD9845 /* Info.plist */,
 			);
 			path = BaseLocalDataAccessTests;
+			sourceTree = "<group>";
+		};
+		91558AD31DB162A000DD9845 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */,
+				91558AD51DB162A900DD9845 /* EntityProtocol.swift */,
+				91558AD61DB162A900DD9845 /* GenericDataAccess.swift */,
+				91558AD71DB162A900DD9845 /* ModelProtocol.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		91558AE01DB162F000DD9845 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				91558AE11DB162FA00DD9845 /* Enum.swift */,
+				91558AE21DB162FA00DD9845 /* ErrorTypes.swift */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		91558AE51DB1630600DD9845 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91558AE61DB1631400DD9845 /* ArrayExtensions.swift */,
+				91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		91558AEA1DB1632200DD9845 /* ManagedObjectContext */ = {
+			isa = PBXGroup;
+			children = (
+				91558AEB1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift */,
+			);
+			name = ManagedObjectContext;
+			sourceTree = "<group>";
+		};
+		91558AED1DB1633800DD9845 /* Predicate */ = {
+			isa = PBXGroup;
+			children = (
+				91558AEE1DB1634A00DD9845 /* PredicateCompoundObject.swift */,
+				91558AEF1DB1634A00DD9845 /* PredicateObject.swift */,
+				91558AF01DB1634A00DD9845 /* PredicateProtocol.swift */,
+			);
+			name = Predicate;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		91558AF41DB1635400DD9845 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				91558AF51DB1635D00DD9845 /* SortObject.swift */,
+				91558AF61DB1635D00DD9845 /* SortProtocol.swift */,
+			);
+			name = Sort;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +240,7 @@
 					91558AB81DB1602900DD9845 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = JCMPWFYFGR;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					91558AC11DB1602A00DD9845 = {
@@ -198,6 +290,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91558AD91DB162A900DD9845 /* EntityProtocol.swift in Sources */,
+				91558AF31DB1634A00DD9845 /* PredicateProtocol.swift in Sources */,
+				91558ADB1DB162A900DD9845 /* ModelProtocol.swift in Sources */,
+				91558AF71DB1635D00DD9845 /* SortObject.swift in Sources */,
+				91558AE81DB1631400DD9845 /* ArrayExtensions.swift in Sources */,
+				91558AF21DB1634A00DD9845 /* PredicateObject.swift in Sources */,
+				91558AEC1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift in Sources */,
+				91558AF81DB1635D00DD9845 /* SortProtocol.swift in Sources */,
+				91558ADA1DB162A900DD9845 /* GenericDataAccess.swift in Sources */,
+				91558AE31DB162FA00DD9845 /* Enum.swift in Sources */,
+				91558AE41DB162FA00DD9845 /* ErrorTypes.swift in Sources */,
+				91558AD81DB162A900DD9845 /* DataAccessProtocol.swift in Sources */,
+				91558AE91DB1631400DD9845 /* DataAccessProtocolExtensions.swift in Sources */,
+				91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +428,7 @@
 		91558ACE1DB1602A00DD9845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JCMPWFYFGR;
@@ -334,6 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.somesimplesolutions.BaseLocalDataAccess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +449,7 @@
 		91558ACF1DB1602A00DD9845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = JCMPWFYFGR;
@@ -360,6 +469,7 @@
 		91558AD11DB1602A00DD9845 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JCMPWFYFGR;
 				INFOPLIST_FILE = BaseLocalDataAccessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +482,7 @@
 		91558AD21DB1602A00DD9845 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = JCMPWFYFGR;
 				INFOPLIST_FILE = BaseLocalDataAccessTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
