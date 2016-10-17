@@ -21,7 +21,7 @@ public struct SortObject: SortProtocol {
         return [NSSortDescriptor(key: self.fieldName, ascending: sortDirection())]
     }
     
-    fileprivate func sortDirection() -> Bool{
+    private func sortDirection() -> Bool{
         switch self.direction {
         case .ascending:
             return true

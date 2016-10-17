@@ -9,8 +9,8 @@
 import Foundation
 public struct PredicateCompoundObject: PredicateProtocol {
     
-    fileprivate var predicateObjects: [PredicateObject]
-    fileprivate var compoundOperator: CompoundOperatorEnum
+    private var predicateObjects: [PredicateObject]
+    private var compoundOperator: CompoundOperatorEnum
     
     public init(compoundOperator: CompoundOperatorEnum){
         
@@ -42,7 +42,7 @@ public struct PredicateCompoundObject: PredicateProtocol {
         }
     }
     
-    fileprivate func getNSCompoundPredicateType(_ compoundOperator: CompoundOperatorEnum) -> NSCompoundPredicate.LogicalType{
+    private func getNSCompoundPredicateType(_ compoundOperator: CompoundOperatorEnum) -> NSCompoundPredicate.LogicalType{
         switch compoundOperator {
         case .and:
             return NSCompoundPredicate.LogicalType.and

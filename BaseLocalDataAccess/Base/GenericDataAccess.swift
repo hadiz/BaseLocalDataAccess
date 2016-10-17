@@ -11,17 +11,16 @@ import CoreData
 
 final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T: NSFetchRequestResult {
     
-    fileprivate let context: ManagedObjectContextProtocol
+    private let context: ManagedObjectContextProtocol
     
-    fileprivate var managedObjectContext: NSManagedObjectContext{
-        return context.managedObjectContext
+    private var managedObjectContext: NSManagedObjectContext
+    
+    public init(context: ManagedObjectContextProtocol) throws{
+        self.context = context
+        managedObjectContext = try context.get()
     }
     
-    public init(initialContext: ManagedObjectContextProtocol){
-        context = initialContext
-    }
-    
-    fileprivate func getName() -> String{
+    private func getName() -> String{
         return T.entityName
     }
     

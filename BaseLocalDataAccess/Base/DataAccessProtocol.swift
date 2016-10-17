@@ -11,5 +11,4 @@ import CoreData
 public protocol DataAccessProtocol {
     associatedtype T: EntityProtocol, AnyObject, NSFetchRequestResult
     var dataAccess : GenericDataAccess<T> {get}
-    var context: ManagedObjectContextProtocol{get}
 }

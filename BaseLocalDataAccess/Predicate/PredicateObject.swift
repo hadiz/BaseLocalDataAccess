@@ -10,9 +10,9 @@ import Foundation
 public struct PredicateObject: PredicateProtocol {
     var fieldName: String
     var operatorName: OperatorEnum
-    var value: NSObject
+    var value: Any
     
-   public init(fieldName: String,operatorName: OperatorEnum,value: NSObject){
+   public init(fieldName: String,operatorName: OperatorEnum,value: Any){
         self.fieldName = fieldName
         self.operatorName = operatorName
         self.value = value
@@ -20,6 +20,6 @@ public struct PredicateObject: PredicateProtocol {
     
    public func toNSPredicate() -> NSPredicate? {
         let predicateString = String(format: "%@ %@ %@", self.fieldName, self.operatorName.rawValue, "%@")
-        return  NSPredicate(format: predicateString, self.value)
+        return  NSPredicate(format: predicateString, [self.value])
     }
 }
