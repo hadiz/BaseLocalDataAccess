@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4350ACDF1DB6455600825B2E /* PredicateCompoundObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350ACDE1DB6455600825B2E /* PredicateCompoundObjectTests.swift */; };
 		91558AC31DB1602A00DD9845 /* BaseLocalDataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */; };
 		91558AC81DB1602A00DD9845 /* BaseLocalDataAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */; };
 		91558ACA1DB1602A00DD9845 /* BaseLocalDataAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 91558ABC1DB1602900DD9845 /* BaseLocalDataAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4350ACDE1DB6455600825B2E /* PredicateCompoundObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateCompoundObjectTests.swift; sourceTree = "<group>"; };
 		91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseLocalDataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91558ABC1DB1602900DD9845 /* BaseLocalDataAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLocalDataAccess.h; sourceTree = "<group>"; };
 		91558ABD1DB1602900DD9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,8 +130,9 @@
 		91558AC61DB1602A00DD9845 /* BaseLocalDataAccessTests */ = {
 			isa = PBXGroup;
 			children = (
-				91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */,
 				91558AC91DB1602A00DD9845 /* Info.plist */,
+				91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */,
+				4350ACDE1DB6455600825B2E /* PredicateCompoundObjectTests.swift */,
 			);
 			path = BaseLocalDataAccessTests;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91558AC81DB1602A00DD9845 /* BaseLocalDataAccessTests.swift in Sources */,
+				4350ACDF1DB6455600825B2E /* PredicateCompoundObjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
