@@ -9,7 +9,7 @@
 import XCTest
 @testable import BaseLocalDataAccess
 
-class BaseLocalDataAccessTests: XCTestCase {
+class SortObjectTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,18 @@ class BaseLocalDataAccessTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testToNSSortDescriptor() {
+        let sortObject =  SortObject(fieldName: "id", direction: .ascending)
+        let sortDescriptors = sortObject.toNSSortDescriptor()
+        let directSortDescriptor =  NSSortDescriptor(key: "id", ascending: true)
+        
+        guard let uSortDescriptors = sortDescriptors, uSortDescriptors.count > 0 else{
+            XCTFail("toNSSortDescriptor should create NSSortDescriptor object")
+            return
         }
+        let sortDescriptor = uSortDescriptors[0]
+        
+        XCTAssertEqual(sortDescriptor.key, directSortDescriptor.key, "Sort field should set")
+        XCTAssertEqual(sortDescriptor.ascending, directSortDescriptor.ascending, "direction should set correctly")
     }
-    
 }
