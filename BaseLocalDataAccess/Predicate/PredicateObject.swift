@@ -20,6 +20,6 @@ public struct PredicateObject: PredicateProtocol {
     
    public func toNSPredicate() -> NSPredicate? {
         let predicateString = String(format: "%@ %@ %@", self.fieldName, self.operatorName.rawValue, "%@")
-        return  NSPredicate(format: predicateString, [self.value])
+    return NSPredicate(format: predicateString, argumentArray: [self.value])
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension DataAccessProtocol{
+public extension DataAccessProtocol{
     
     public func generateId() -> String{
         return UUID().uuidString
