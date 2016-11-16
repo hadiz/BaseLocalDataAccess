@@ -11,6 +11,7 @@ import CoreData
 public protocol GenericDataAccessProtocol {
     associatedtype T
     
+    init(context: ManagedObjectContextProtocol)
     func createNewInstance() throws -> T
     func saveEntity(_ entity: T) throws
     func fetchEntity(predicate: PredicateProtocol?, sort: SortProtocol?, fetchLimit: Int?) throws -> [T]
