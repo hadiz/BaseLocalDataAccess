@@ -9,22 +9,20 @@
 import UIKit
 import CoreData
 
-final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T: NSFetchRequestResult {
+final public class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: EntityProtocol, TEntity: AnyObject, TEntity: NSFetchRequestResult {
+  
+    public typealias T = TEntity
     
     private let context: ManagedObjectContextProtocol
     
     private var managedObjectContext: NSManagedObjectContext
     
-    public init(context: ManagedObjectContextProtocol) throws{
+    public init(context: ManagedObjectContextProtocol){
         self.context = context
-        managedObjectContext = try context.get()
+        managedObjectContext = context.get()
     }
     
-    private func getName() -> String{
-        return T.entityName
-    }
-    
-    public func createNewInstance() throws -> T{
+    public func createNewInstance() throws -> TEntity{
         let entityName = getName()
         
         if let entity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext) as? T{
@@ -34,7 +32,7 @@ final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T
         throw EntityCRUDError.failNewEntity(entityName)
     }
     
-    public func saveEntity(_ entity: T) throws{
+    public func saveEntity(_ entity: TEntity) throws{
         
         do{
             try managedObjectContext.save()
@@ -45,7 +43,7 @@ final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T
         
     }
     
-    public func fetchEntity(predicate: PredicateProtocol? = nil, sort: SortProtocol? = nil, fetchLimit: Int? = nil) throws -> [T]{
+    public func fetchEntity(predicate: PredicateProtocol? = nil, sort: SortProtocol? = nil, fetchLimit: Int? = nil) throws -> [TEntity]{
         
         let entityName = getName()
         
@@ -83,7 +81,7 @@ final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T
         }
     }
     
-    public func deleteEntity(_ entity: T) throws{
+    public func deleteEntity(_ entity: TEntity) throws{
         
         if let entity = entity as? NSManagedObject{
             managedObjectContext.delete(entity)
@@ -96,5 +94,9 @@ final public class GenericDataAccess<T> where T: EntityProtocol, T: AnyObject, T
                 throw EntityCRUDError.failDeleteEntity(self.getName())
             }
         }
+    }
+    
+    private func getName() -> String{
+        return T.entityName
     }
 }

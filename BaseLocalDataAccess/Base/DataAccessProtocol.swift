@@ -8,7 +8,12 @@
 
 import CoreData
 
-public protocol DataAccessProtocol {
-    associatedtype T: EntityProtocol, AnyObject, NSFetchRequestResult
-    var dataAccess : GenericDataAccess<T> {get}
+public protocol GenericDataAccessProtocol {
+    associatedtype T
+    
+    func createNewInstance() throws -> T
+    func saveEntity(_ entity: T) throws
+    func fetchEntity(predicate: PredicateProtocol?, sort: SortProtocol?, fetchLimit: Int?) throws -> [T]
+    func fetchEntityCount(predicate: PredicateProtocol?) throws -> Int
+    func deleteEntity(_ entity: T) throws
 }

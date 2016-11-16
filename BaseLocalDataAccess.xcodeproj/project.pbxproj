@@ -33,7 +33,7 @@
 		91558AE31DB162FA00DD9845 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE11DB162FA00DD9845 /* Enum.swift */; };
 		91558AE41DB162FA00DD9845 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE21DB162FA00DD9845 /* ErrorTypes.swift */; };
 		91558AE81DB1631400DD9845 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE61DB1631400DD9845 /* ArrayExtensions.swift */; };
-		91558AE91DB1631400DD9845 /* DataAccessProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */; };
+		91558AE91DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AE71DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift */; };
 		91558AEC1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEB1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift */; };
 		91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEE1DB1634A00DD9845 /* PredicateCompoundObject.swift */; };
 		91558AF21DB1634A00DD9845 /* PredicateObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AEF1DB1634A00DD9845 /* PredicateObject.swift */; };
@@ -68,7 +68,7 @@
 		91558AE11DB162FA00DD9845 /* Enum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = General/Enum.swift; sourceTree = "<group>"; };
 		91558AE21DB162FA00DD9845 /* ErrorTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorTypes.swift; path = General/ErrorTypes.swift; sourceTree = "<group>"; };
 		91558AE61DB1631400DD9845 /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Extensions/ArrayExtensions.swift; sourceTree = "<group>"; };
-		91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataAccessProtocolExtensions.swift; path = Extensions/DataAccessProtocolExtensions.swift; sourceTree = "<group>"; };
+		91558AE71DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericDataAccessProtocolExtensions.swift; path = Extensions/GenericDataAccessProtocolExtensions.swift; sourceTree = "<group>"; };
 		91558AEB1DB1632D00DD9845 /* ManagedObjectContextProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectContextProtocol.swift; path = ManagedObjectContext/ManagedObjectContextProtocol.swift; sourceTree = "<group>"; };
 		91558AEE1DB1634A00DD9845 /* PredicateCompoundObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateCompoundObject.swift; path = BaseLocalDataAccess/Predicate/PredicateCompoundObject.swift; sourceTree = "<group>"; };
 		91558AEF1DB1634A00DD9845 /* PredicateObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateObject.swift; path = BaseLocalDataAccess/Predicate/PredicateObject.swift; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 			children = (
 				91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */,
 				91558AD51DB162A900DD9845 /* EntityProtocol.swift */,
-				91558AD61DB162A900DD9845 /* GenericDataAccess.swift */,
 				91558AD71DB162A900DD9845 /* ModelProtocol.swift */,
+				91558AD61DB162A900DD9845 /* GenericDataAccess.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				91558AE61DB1631400DD9845 /* ArrayExtensions.swift */,
-				91558AE71DB1631400DD9845 /* DataAccessProtocolExtensions.swift */,
+				91558AE71DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -344,7 +344,7 @@
 				91558AE31DB162FA00DD9845 /* Enum.swift in Sources */,
 				91558AE41DB162FA00DD9845 /* ErrorTypes.swift in Sources */,
 				91558AD81DB162A900DD9845 /* DataAccessProtocol.swift in Sources */,
-				91558AE91DB1631400DD9845 /* DataAccessProtocolExtensions.swift in Sources */,
+				91558AE91DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift in Sources */,
 				91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

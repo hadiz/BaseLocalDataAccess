@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension DataAccessProtocol{
+public extension GenericDataAccessProtocol where T: EntityProtocol{
     
     public func generateId() -> String{
         return UUID().uuidString
@@ -16,7 +16,7 @@ public extension DataAccessProtocol{
     
     public func fetchEntities(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil) throws -> [T]{
         do{
-            return try dataAccess.fetchEntity(predicate: predicateProtocol, sort: sortProtocol, fetchLimit: fetchLimit)
+            return try fetchEntity(predicate: predicateProtocol, sort: sortProtocol, fetchLimit: fetchLimit)
         }
         catch{
             throw EntityCRUDError.failFetchEntity(T.entityName)
