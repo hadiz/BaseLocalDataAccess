@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-final public class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: EntityProtocol, TEntity: AnyObject, TEntity: NSFetchRequestResult {
+public class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: EntityProtocol, TEntity: AnyObject, TEntity: NSFetchRequestResult {
   
     public typealias T = TEntity
     
@@ -17,7 +17,7 @@ final public class GenericDataAccess<TEntity>: GenericDataAccessProtocol where T
     
     private var managedObjectContext: NSManagedObjectContext
     
-    public init(context: ManagedObjectContextProtocol){
+    required public init(context: ManagedObjectContextProtocol) {
         self.context = context
         managedObjectContext = context.get()
     }
