@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-public class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: EntityProtocol, TEntity: AnyObject, TEntity: NSFetchRequestResult {
+open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: EntityProtocol, TEntity: AnyObject, TEntity: NSFetchRequestResult {
   
     public typealias T = TEntity
     
