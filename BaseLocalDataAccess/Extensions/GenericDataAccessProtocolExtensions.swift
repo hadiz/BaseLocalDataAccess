@@ -43,9 +43,9 @@ public extension GenericDataAccessProtocol where T: EntityProtocol{
         }
     }
     
-    public func fetchModels<TModel: ModelProtocol>(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil) throws -> [TModel] {
+    public func fetchModels<TModel: ModelProtocol>(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [TModel] {
         do{
-            let entities = try fetchEntities(predicate: predicateProtocol, sort: sortProtocol,fetchLimit: fetchLimit)
+            let entities = try fetchEntities(predicate: predicateProtocol, sort: sortProtocol,fetchLimit: fetchLimit, fetchOffset: fetchOffset)
             return try entities.toModels()
         }
         catch ModelError.failCreateModel(let model){
