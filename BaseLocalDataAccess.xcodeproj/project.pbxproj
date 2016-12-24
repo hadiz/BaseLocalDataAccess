@@ -26,7 +26,7 @@
 		91558AC31DB1602A00DD9845 /* BaseLocalDataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */; };
 		91558AC81DB1602A00DD9845 /* BaseLocalDataAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */; };
 		91558ACA1DB1602A00DD9845 /* BaseLocalDataAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = 91558ABC1DB1602900DD9845 /* BaseLocalDataAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91558AD81DB162A900DD9845 /* DataAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */; };
+		91558AD81DB162A900DD9845 /* GenericDataAccessProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD41DB162A900DD9845 /* GenericDataAccessProtocol.swift */; };
 		91558AD91DB162A900DD9845 /* EntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD51DB162A900DD9845 /* EntityProtocol.swift */; };
 		91558ADA1DB162A900DD9845 /* GenericDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD61DB162A900DD9845 /* GenericDataAccess.swift */; };
 		91558ADB1DB162A900DD9845 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91558AD71DB162A900DD9845 /* ModelProtocol.swift */; };
@@ -61,7 +61,7 @@
 		91558AC21DB1602A00DD9845 /* BaseLocalDataAccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseLocalDataAccessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91558AC71DB1602A00DD9845 /* BaseLocalDataAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLocalDataAccessTests.swift; sourceTree = "<group>"; };
 		91558AC91DB1602A00DD9845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataAccessProtocol.swift; path = Base/DataAccessProtocol.swift; sourceTree = "<group>"; };
+		91558AD41DB162A900DD9845 /* GenericDataAccessProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericDataAccessProtocol.swift; path = Base/GenericDataAccessProtocol.swift; sourceTree = "<group>"; };
 		91558AD51DB162A900DD9845 /* EntityProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntityProtocol.swift; path = Base/EntityProtocol.swift; sourceTree = "<group>"; };
 		91558AD61DB162A900DD9845 /* GenericDataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericDataAccess.swift; path = Base/GenericDataAccess.swift; sourceTree = "<group>"; };
 		91558AD71DB162A900DD9845 /* ModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelProtocol.swift; path = Base/ModelProtocol.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		91558AD31DB162A000DD9845 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				91558AD41DB162A900DD9845 /* DataAccessProtocol.swift */,
+				91558AD41DB162A900DD9845 /* GenericDataAccessProtocol.swift */,
 				91558AD51DB162A900DD9845 /* EntityProtocol.swift */,
 				91558AD71DB162A900DD9845 /* ModelProtocol.swift */,
 				91558AD61DB162A900DD9845 /* GenericDataAccess.swift */,
@@ -343,7 +343,7 @@
 				91558ADA1DB162A900DD9845 /* GenericDataAccess.swift in Sources */,
 				91558AE31DB162FA00DD9845 /* Enum.swift in Sources */,
 				91558AE41DB162FA00DD9845 /* ErrorTypes.swift in Sources */,
-				91558AD81DB162A900DD9845 /* DataAccessProtocol.swift in Sources */,
+				91558AD81DB162A900DD9845 /* GenericDataAccessProtocol.swift in Sources */,
 				91558AE91DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift in Sources */,
 				91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */,
 			);

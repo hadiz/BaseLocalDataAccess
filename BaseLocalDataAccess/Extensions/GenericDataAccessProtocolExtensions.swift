@@ -14,9 +14,9 @@ public extension GenericDataAccessProtocol where T: EntityProtocol{
         return UUID().uuidString
     }
     
-    public func fetchEntities(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil) throws -> [T]{
+    public func fetchEntities(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [T]{
         do{
-            return try fetchEntity(predicate: predicateProtocol, sort: sortProtocol, fetchLimit: fetchLimit)
+            return try fetchEntity(predicate: predicateProtocol, sort: sortProtocol, fetchLimit: fetchLimit, fetchOffset: fetchOffset)
         }
         catch{
             throw EntityCRUDError.failFetchEntity(T.entityName)

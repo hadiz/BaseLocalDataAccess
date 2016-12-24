@@ -43,7 +43,7 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
         
     }
     
-    public func fetchEntity(predicate: PredicateProtocol? = nil, sort: SortProtocol? = nil, fetchLimit: Int? = nil) throws -> [TEntity]{
+    public func fetchEntity(predicate: PredicateProtocol? = nil, sort: SortProtocol? = nil, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [TEntity]{
         
         let entityName = getName()
         

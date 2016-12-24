@@ -14,7 +14,7 @@ public protocol GenericDataAccessProtocol {
     init(context: ManagedObjectContextProtocol)
     func createNewInstance() throws -> T
     func saveEntity(_ entity: T) throws
-    func fetchEntity(predicate: PredicateProtocol?, sort: SortProtocol?, fetchLimit: Int?) throws -> [T]
+    func fetchEntity(predicate: PredicateProtocol?, sort: SortProtocol?, fetchLimit: Int?, fetchOffset: Int?) throws -> [T]
     func fetchEntityCount(predicate: PredicateProtocol?) throws -> Int
     func deleteEntity(_ entity: T) throws
 }
