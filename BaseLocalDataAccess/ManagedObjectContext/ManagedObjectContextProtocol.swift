@@ -9,5 +9,5 @@
 import CoreData
 
 public protocol ManagedObjectContextProtocol {
-    func get() -> NSManagedObjectContext
+    var managedObjectContext: NSManagedObjectContext {set get}
 }

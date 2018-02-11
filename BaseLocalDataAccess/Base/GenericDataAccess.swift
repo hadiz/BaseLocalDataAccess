@@ -15,11 +15,12 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
     
     private let context: ManagedObjectContextProtocol
     
-    private var managedObjectContext: NSManagedObjectContext
+    private lazy var managedObjectContext: NSManagedObjectContext = {
+        return  context.managedObjectContext
+    }()
     
     required public init(context: ManagedObjectContextProtocol) {
         self.context = context
-        managedObjectContext = context.get()
     }
     
     public func createNewInstance() throws -> TEntity{
