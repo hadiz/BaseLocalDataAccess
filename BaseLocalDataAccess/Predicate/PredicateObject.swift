@@ -12,7 +12,7 @@ public struct PredicateObject: PredicateProtocol {
     var operatorName: OperatorEnum
     var value: Any
     
-   public init(fieldName: String,operatorName: OperatorEnum,value: Any){
+   public init(fieldName: String,operatorName: OperatorEnum, value: Any){
         self.fieldName = fieldName
         self.operatorName = operatorName
         self.value = value

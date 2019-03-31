@@ -17,7 +17,7 @@ extension Array where Element: EntityProtocol{
                 let model = try item.toModel()
                 models.append(model)
             }
-            return models.flatMap{$0 as? TModel}
+            return models.compactMap{$0 as? TModel}
         }
         catch let error as NSError{
             throw ModelError.failCreateModel(error.localizedDescription)

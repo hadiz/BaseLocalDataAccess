@@ -17,7 +17,7 @@ public enum OperatorEnum: String{
     case greaterEqualThan = ">="
     case lessThan = "<"
     case lessEqualThan = "<="
-    case contains = "CONTAINS"
+    case contains = "CONTAINS[cd]"
 }
 public enum CompoundOperatorEnum {
     case and
