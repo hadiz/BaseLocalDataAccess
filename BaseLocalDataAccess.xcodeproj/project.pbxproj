@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0F1E9F9C225E95120012AF3F /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1E9F9B225E95120012AF3F /* NSManagedObjectContext+Extensions.swift */; };
 		4350ACDF1DB6455600825B2E /* PredicateCompoundObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350ACDE1DB6455600825B2E /* PredicateCompoundObjectTests.swift */; };
 		4350ACE11DB653D400825B2E /* PredicateObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350ACE01DB653D400825B2E /* PredicateObjectTests.swift */; };
 		91558AC31DB1602A00DD9845 /* BaseLocalDataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1E9F9B225E95120012AF3F /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSManagedObjectContext+Extensions.swift"; path = "Extensions/NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		4350ACDE1DB6455600825B2E /* PredicateCompoundObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateCompoundObjectTests.swift; sourceTree = "<group>"; };
 		4350ACE01DB653D400825B2E /* PredicateObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateObjectTests.swift; sourceTree = "<group>"; };
 		91558AB91DB1602900DD9845 /* BaseLocalDataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BaseLocalDataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 			children = (
 				91558AE61DB1631400DD9845 /* ArrayExtensions.swift */,
 				91558AE71DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift */,
+				0F1E9F9B225E95120012AF3F /* NSManagedObjectContext+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				91558AD81DB162A900DD9845 /* GenericDataAccessProtocol.swift in Sources */,
 				91558AE91DB1631400DD9845 /* GenericDataAccessProtocolExtensions.swift in Sources */,
 				91558AF11DB1634A00DD9845 /* PredicateCompoundObject.swift in Sources */,
+				0F1E9F9C225E95120012AF3F /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

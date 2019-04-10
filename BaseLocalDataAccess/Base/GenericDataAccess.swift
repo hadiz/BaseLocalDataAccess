@@ -25,18 +25,26 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
     
     public func createNewInstance() throws -> TEntity{
         let entityName = getName()
+      
+        var entity: NSManagedObject? = nil
         
-        if let entity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext) as? T{
+        managedObjectContext.performAndWait {
+            entity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: managedObjectContext)
+        }
+    
+        if let entity = entity as? T {
             return entity
         }
-        
+    
         throw EntityCRUDError.failNewEntity(entityName)
     }
     
     public func saveEntity(_ entity: TEntity) throws{
         
         do{
-            try managedObjectContext.save()
+            try managedObjectContext.performAndWait {
+                try managedObjectContext.save()
+            }
         }
         catch let error as NSError  {
             throw EntityCRUDError.failSaveEntity(error.localizedDescription)
@@ -59,7 +67,9 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
         }
         
         do{
-            return try managedObjectContext.fetch(fetchRequest)
+            return try managedObjectContext.performAndWait {
+                return try managedObjectContext.fetch(fetchRequest)
+            }
         }
         catch{
             throw EntityCRUDError.failFetchEntity(getName())
@@ -74,8 +84,9 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
         let fetchRequest = NSFetchRequest<T>(entityName: entityName)
         fetchRequest.predicate = predicate?.toNSPredicate()
         do{
-            let count = try managedObjectContext.count(for: fetchRequest)
-            return count
+            return try managedObjectContext.performAndWait {
+                return try managedObjectContext.count(for: fetchRequest)
+            }
         }
         catch{
             throw EntityCRUDError.failFetchEntityCount(getName())
@@ -88,7 +99,9 @@ open class GenericDataAccess<TEntity>: GenericDataAccessProtocol where TEntity: 
             managedObjectContext.delete(entity)
             
             do{
-                try managedObjectContext.save()
+                try managedObjectContext.performAndWait {
+                    try managedObjectContext.save()
+                }
                 
             }
             catch{
