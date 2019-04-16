@@ -10,11 +10,11 @@ import Foundation
 
 public extension GenericDataAccessProtocol where T: EntityProtocol{
     
-    public func generateId() -> String{
+    func generateId() -> String{
         return UUID().uuidString
     }
     
-    public func fetchEntities(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [T]{
+    func fetchEntities(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [T]{
         do{
             return try fetchEntity(predicate: predicateProtocol, sort: sortProtocol, fetchLimit: fetchLimit, fetchOffset: fetchOffset)
         }
@@ -23,7 +23,7 @@ public extension GenericDataAccessProtocol where T: EntityProtocol{
         }
     }
     
-    public func fetchEntity(withId id: UUID) throws -> T? {
+    func fetchEntity(withId id: UUID) throws -> T? {
         var predicateProtocol: PredicateProtocol
         predicateProtocol = PredicateObject(fieldName: T.idField, operatorName: OperatorEnum.equal, value: id.uuidString as NSObject)
         do{
@@ -43,7 +43,7 @@ public extension GenericDataAccessProtocol where T: EntityProtocol{
         }
     }
     
-    public func fetchModels<TModel: ModelProtocol>(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [TModel] {
+    func fetchModels<TModel: ModelProtocol>(predicate predicateProtocol: PredicateProtocol?, sort sortProtocol: SortProtocol?, fetchLimit: Int? = nil, fetchOffset: Int? = nil) throws -> [TModel] {
         do{
             let entities = try fetchEntities(predicate: predicateProtocol, sort: sortProtocol,fetchLimit: fetchLimit, fetchOffset: fetchOffset)
             return try entities.toModels()
@@ -56,7 +56,7 @@ public extension GenericDataAccessProtocol where T: EntityProtocol{
         }
     }
     
-    public func getEntityName() -> String{
+    func getEntityName() -> String{
         return T.entityName
     }
 }
